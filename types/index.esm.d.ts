@@ -2207,6 +2207,11 @@ export interface LegendOptions<TType extends ChartType> {
    */
   fullSize: boolean;
   /**
+   * Add extra margin bottom
+   * @default undefined
+   */
+  marginBottom: number | undefined;
+  /**
    * Legend will show datasets in reverse order.
    * @default false
    */
