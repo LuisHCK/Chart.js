@@ -4008,7 +4008,7 @@ class Scale extends Element {
     }
   }
   afterFit() {
-    this.height = this.height + 50;
+    callback(this.options.afterFit, [this]);
   }
   isHorizontal() {
     const {axis, position} = this.options;
@@ -7629,6 +7629,7 @@ class Legend extends Element {
     }
     this.width = Math.min(width, options.maxWidth || this.maxWidth);
     this.height = Math.min(height, options.maxHeight || this.maxHeight);
+    this.height += 30;
   }
   _fitRows(titleHeight, fontSize, boxWidth, itemHeight) {
     const {ctx, maxWidth, options: {labels: {padding}}} = this;

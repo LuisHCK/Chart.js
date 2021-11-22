@@ -744,7 +744,7 @@ export default class Scale extends Element {
   }
 
   afterFit() {
-    this.height = this.height + 50;
+    call(this.options.afterFit, [this]);
   }
 
   // Shared Methods
