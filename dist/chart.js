@@ -10195,7 +10195,6 @@ class Legend extends Element {
     this.position = undefined;
     this.weight = undefined;
     this.fullSize = undefined;
-    this.marginBottom = undefined;
   }
   update(maxWidth, maxHeight, margins) {
     this.maxWidth = maxWidth;
@@ -10252,8 +10251,8 @@ class Legend extends Element {
     }
     this.width = Math.min(width, options.maxWidth || this.maxWidth);
     this.height = Math.min(height, options.maxHeight || this.maxHeight);
-    if (this.marginBottom && !isNaN(this.marginBottom)) {
-      this.height += this.marginBottom;
+    if (options.marginBottom && !isNaN(options.marginBottom)) {
+      this.height += options.marginBottom;
     }
   }
   _fitRows(titleHeight, fontSize, boxWidth, itemHeight) {
